@@ -1,38 +1,143 @@
-.App {
-  text-align: center;
+.main {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+.quiz {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  /* position: relative; */
+  flex-direction: column;
+
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #020230),
+    url("/bg.jpg");
+}
+/* .levels{
+  width: 20%;
+  height: 100%;
+} */
+.timer-container {
+  display: flex;
+  width: 100%;
+  align-items: flex-end;
+  height: 50%;
+}
+.timer {
+  margin-left: 40px;
+  width: 90px;
+  height: 90px;
+  border: 3px solid white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.timer h2 {
+  color: white;
+  font-size: 30px;
+}
+.result {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.result h2 {
+  padding: 100px;
+  color: rgb(139, 221, 139);
+  font-size: 50px;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.quiz-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 50%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.question {
+  width: 100%;
+  font-size: 30px;
+  height: 50px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background: linear-gradient(#100241, black);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.levels {
+  background-color: #100241;
+  width: 20%;
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.levels-col {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.level {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 220px;
+  height: 40px;
+}
+.level-active {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: full;
+  height: 40px;
+  border-radius: 8px;
+  background-color: aliceblue;
+  color: #020230;
+}
+.level span {
+  color: aqua;
+}
+.question-box {
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-around;
 }
-
-.App-link {
-  color: #61dafb;
+.answers {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.btn {
+  width: 110px;
+  height: 70px;
+  font-size: 18px;
+  padding: 5px;
+  border-radius: 7px;
+}
+.btn.answer {
+  background-color: #020230;
+  color: aliceblue;
+}
+.correct-answer {
+  background-color: green;
+  color: aliceblue;
+}
+.wrong-answer {
+  background-color: red;
+  color: aliceblue;
+}
+.hidden {
+  display: none;
+}
+.selected {
+  background-color: gray;
 }
